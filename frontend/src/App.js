@@ -1,14 +1,14 @@
 import React from 'react';
-import './App.css';
 import { Route,BrowserRouter as Router, Routes } from 'react-router-dom';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.bundle.min';
-import $ from 'jquery';
-import Popper from 'popper.js';
-import Login from './components/Login';
-import Home from './components/Home';
+import Login  from './components/login';
+import Home from './components/home';
 import Inbox from './components/inbox';
 import Profile from './components/profile';
+import Signup from './components/sign';
+import './App.css';
+import Compose from './components/compose';
+import Viewmail from './components/viewMail';
+import Sentmails from './components/sentmails';
 
 function App() {
   return (
@@ -17,8 +17,12 @@ function App() {
         <Routes>
           <Route path="/home" element={<Home/>} />
           <Route path="/" element={<Login/>} />
-          <Route path="/inbox" element={<Inbox/>} />
-          <Route path="/profile" element={<Profile/>} />
+          <Route path="/inbox" element={<Inbox/>} /> 
+          <Route path="/profile" element={<Profile/>} /> 
+          <Route path="/signup" element={<Signup/>} />
+          <Route path="/compose" element={<Compose/>} />
+          <Route path="/viewmail" element={<Viewmail/>} />
+          <Route path="/viewsentmail" element={<Sentmails/>} />
         </Routes>
       </Router>
     </>
