@@ -6,7 +6,7 @@ A voice-based Email application for visually challenged people.Email is one of t
 
 ### Frontend:
 
-<img src="https://user-images.githubusercontent.com/57532977/236160307-1300cbcf-156c-45f9-a43b-94aa8c49beb0.png" width="127" height="80" />&emsp;  &emsp; 
+<img src="https://user-images.githubusercontent.com/57532977/236160307-1300cbcf-156c-45f9-a43b-94aa8c49beb0.png" width="127" height="60" />&emsp;  &emsp; 
 <img src="https://user-images.githubusercontent.com/57532977/236159886-900c442d-9417-42ae-8b33-cd354536d158.png" width="127" height="28" />&emsp;  &emsp; 
 <img src="https://user-images.githubusercontent.com/57532977/236159951-bb8eecc4-5677-482b-b124-45f5ea3fd100.png" width="127" height="28" />
 
