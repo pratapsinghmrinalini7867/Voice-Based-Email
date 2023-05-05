@@ -196,6 +196,12 @@ def Compose():
 
     dic = {"to": to_id, "subject": sub, "description": desc, "date_created": datetime.utcnow()}
     collection1.insert_one(dic)
+    
+    tts = gTTS(text='Mail successfully sent. Going back', lang='en', slow=False)
+    ttsname = ("C:\\Users\\prata\\OneDrive\\Desktop\\Project\\Voice Folder\\f.mp3")
+    tts.save(ttsname)
+    playsound("C:\\Users\\prata\\OneDrive\\Desktop\\Project\\Voice Folder\\f.mp3")
+    os.remove(ttsname)
 
     return {"to": to_id, "sub": sub, "desc": desc}
 
@@ -203,13 +209,121 @@ def Compose():
 def Inbox():
     mails = collection2.find()
     improved_emails = parse_json(mails)
-    # print(improved_emails)
+    
+    for dic in improved_emails:
+        tts = gTTS(text='from', lang='en', slow=False)
+        ttsname = ("C:\\Users\\prata\\OneDrive\\Desktop\\Project\\Voice Folder\\f.mp3")
+        tts.save(ttsname)
+        playsound("C:\\Users\\prata\\OneDrive\\Desktop\\Project\\Voice Folder\\f.mp3")
+        os.remove(ttsname)
+
+
+        tts = gTTS(text=dic['from'], lang='en', slow=False)
+        ttsname = ("C:\\Users\\prata\\OneDrive\\Desktop\\Project\\Voice Folder\\f.mp3")
+        tts.save(ttsname)
+        playsound("C:\\Users\\prata\\OneDrive\\Desktop\\Project\\Voice Folder\\f.mp3")
+        os.remove(ttsname)
+
+        tts = gTTS(text='subject', lang='en', slow=False)
+        ttsname = ("C:\\Users\\prata\\OneDrive\\Desktop\\Project\\Voice Folder\\f.mp3")
+        tts.save(ttsname)
+        playsound("C:\\Users\\prata\\OneDrive\\Desktop\\Project\\Voice Folder\\f.mp3")
+        os.remove(ttsname)
+
+        tts = gTTS(text=dic['subject'], lang='en', slow=False)
+        ttsname = ("C:\\Users\\prata\\OneDrive\\Desktop\\Project\\Voice Folder\\f.mp3")
+        tts.save(ttsname)
+        playsound("C:\\Users\\prata\\OneDrive\\Desktop\\Project\\Voice Folder\\f.mp3")
+        os.remove(ttsname)
+
+        tts = gTTS(text='Message', lang='en', slow=False)
+        ttsname = ("C:\\Users\\prata\\OneDrive\\Desktop\\Project\\Voice Folder\\f.mp3")
+        tts.save(ttsname)
+        playsound("C:\\Users\\prata\\OneDrive\\Desktop\\Project\\Voice Folder\\f.mp3")
+        os.remove(ttsname)
+
+        tts = gTTS(text=dic['description'], lang='en', slow=False)
+        ttsname = ("C:\\Users\\prata\\OneDrive\\Desktop\\Project\\Voice Folder\\f.mp3")
+        tts.save(ttsname)
+        playsound("C:\\Users\\prata\\OneDrive\\Desktop\\Project\\Voice Folder\\f.mp3")
+        os.remove(ttsname)
+
+        tts = gTTS(text='Date Recieved', lang='en', slow=True)
+        ttsname = ("C:\\Users\\prata\\OneDrive\\Desktop\\Project\\Voice Folder\\f.mp3")
+        tts.save(ttsname)
+        playsound("C:\\Users\\prata\\OneDrive\\Desktop\\Project\\Voice Folder\\f.mp3")
+        os.remove(ttsname)
+
+        time = dic['date_created']['$date']
+        print(time)
+
+        tts = gTTS(text=time, lang='en', slow=True)
+        ttsname = ("C:\\Users\\prata\\OneDrive\\Desktop\\Project\\Voice Folder\\f.mp3")
+        tts.save(ttsname)
+        playsound("C:\\Users\\prata\\OneDrive\\Desktop\\Project\\Voice Folder\\f.mp3")
+        os.remove(ttsname)
+    
+    print(improved_emails)
     return  improved_emails
 
 @app.route("/sentmails")
 def Sentmails():
     mails = collection1.find()
     improved_emails = parse_json(mails)
+    
+    for dic in improved_emails:
+        tts = gTTS(text='from', lang='en', slow=False)
+        ttsname = ("C:\\Users\\prata\\OneDrive\\Desktop\\Project\\Voice Folder\\f.mp3")
+        tts.save(ttsname)
+        playsound("C:\\Users\\prata\\OneDrive\\Desktop\\Project\\Voice Folder\\f.mp3")
+        os.remove(ttsname)
+
+
+        tts = gTTS(text=dic['from'], lang='en', slow=False)
+        ttsname = ("C:\\Users\\prata\\OneDrive\\Desktop\\Project\\Voice Folder\\f.mp3")
+        tts.save(ttsname)
+        playsound("C:\\Users\\prata\\OneDrive\\Desktop\\Project\\Voice Folder\\f.mp3")
+        os.remove(ttsname)
+
+        tts = gTTS(text='subject', lang='en', slow=False)
+        ttsname = ("C:\\Users\\prata\\OneDrive\\Desktop\\Project\\Voice Folder\\f.mp3")
+        tts.save(ttsname)
+        playsound("C:\\Users\\prata\\OneDrive\\Desktop\\Project\\Voice Folder\\f.mp3")
+        os.remove(ttsname)
+
+        tts = gTTS(text=dic['subject'], lang='en', slow=False)
+        ttsname = ("C:\\Users\\prata\\OneDrive\\Desktop\\Project\\Voice Folder\\f.mp3")
+        tts.save(ttsname)
+        playsound("C:\\Users\\prata\\OneDrive\\Desktop\\Project\\Voice Folder\\f.mp3")
+        os.remove(ttsname)
+
+        tts = gTTS(text='Message', lang='en', slow=False)
+        ttsname = ("C:\\Users\\prata\\OneDrive\\Desktop\\Project\\Voice Folder\\f.mp3")
+        tts.save(ttsname)
+        playsound("C:\\Users\\prata\\OneDrive\\Desktop\\Project\\Voice Folder\\f.mp3")
+        os.remove(ttsname)
+
+        tts = gTTS(text=dic['description'], lang='en', slow=False)
+        ttsname = ("C:\\Users\\prata\\OneDrive\\Desktop\\Project\\Voice Folder\\f.mp3")
+        tts.save(ttsname)
+        playsound("C:\\Users\\prata\\OneDrive\\Desktop\\Project\\Voice Folder\\f.mp3")
+        os.remove(ttsname)
+
+        tts = gTTS(text='Date Recieved', lang='en', slow=True)
+        ttsname = ("C:\\Users\\prata\\OneDrive\\Desktop\\Project\\Voice Folder\\f.mp3")
+        tts.save(ttsname)
+        playsound("C:\\Users\\prata\\OneDrive\\Desktop\\Project\\Voice Folder\\f.mp3")
+        os.remove(ttsname)
+
+        time = dic['date_created']['$date']
+        print(time)
+
+        tts = gTTS(text=time, lang='en', slow=True)
+        ttsname = ("C:\\Users\\prata\\OneDrive\\Desktop\\Project\\Voice Folder\\f.mp3")
+        tts.save(ttsname)
+        playsound("C:\\Users\\prata\\OneDrive\\Desktop\\Project\\Voice Folder\\f.mp3")
+        os.remove(ttsname)
+    
     return  improved_emails
 
 @app.route('/viewonemail', methods = ['POST'])
