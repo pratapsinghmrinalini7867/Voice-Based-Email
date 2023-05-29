@@ -1,6 +1,6 @@
 # Voice-Based-Email
 
-A voice-based Email application for visually challenged people.Email is one of the most important ways of communication. People who are not physically challenged can use an existing email system very efficiently but some people can not. We developed a system that will help physically challenged people to use the mailing system efficiently.
+A voice-based Email application for visually challenged people. Email is one of the most important ways of communication. People who are not physically challenged can use an existing email system very efficiently but some people can not. We developed a system that will help physically challenged people to use the mailing system efficiently.
 
 ## Software Requirements
 
